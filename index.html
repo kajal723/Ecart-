@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inventory Range Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Inventory Range Dashboard</h1>
+
+        <p class="subtitle">
+            Find products based on price range
+        </p>
+
+        <!-- Search Section -->
+
+        <div class="search-box">
+
+            <div class="input-group">
+                <label>Minimum Price</label>
+                <input type="number" id="minPrice" placeholder="₹5,000">
+            </div>
+
+            <div class="input-group">
+                <label>Maximum Price</label>
+                <input type="number" id="maxPrice" placeholder="₹20,000">
+            </div>
+
+            <button onclick="searchProducts()">
+                Search
+            </button>
+
+        </div>
+
+
+        <!-- Summary -->
+
+        <div class="summary">
+
+            <div class="summary-card">
+                <h3>Products</h3>
+                <p id="productCount">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Inventory Value</h3>
+                <p id="inventoryValue">₹0</p>
+            </div>
+
+        </div>
+
+
+        <!-- Products -->
+
+        <h2>Matching Products</h2>
+
+        <div id="productList" class="product-list">
+
+            <p class="message">
+                Enter a price range and click Search.
+            </p>
+
+        </div>
+
+    </div>
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
