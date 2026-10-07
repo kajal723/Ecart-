@@ -17,21 +17,19 @@
         <h1>Inventory Range Dashboard</h1>
 
         <p class="subtitle">
-            Find products based on price range
+            Find products based on a selected price range
         </p>
-
-        <!-- Search Section -->
 
         <div class="search-box">
 
             <div class="input-group">
                 <label>Minimum Price</label>
-                <input type="number" id="minPrice" placeholder="₹5,000">
+                <input type="number" id="minPrice" min="0" placeholder="₹5,000">
             </div>
 
             <div class="input-group">
                 <label>Maximum Price</label>
-                <input type="number" id="maxPrice" placeholder="₹20,000">
+                <input type="number" id="maxPrice" min="0" placeholder="₹20,000">
             </div>
 
             <button onclick="searchProducts()">
@@ -39,9 +37,6 @@
             </button>
 
         </div>
-
-
-        <!-- Summary -->
 
         <div class="summary">
 
@@ -57,9 +52,6 @@
 
         </div>
 
-
-        <!-- Products -->
-
         <h2>Matching Products</h2>
 
         <div id="productList" class="product-list">
@@ -71,9 +63,8 @@
         </div>
 
     </div>
-<script src="data.js"></script>
-<script src="script.js"></script>
 
+    <script src="data.js"></script>
     <script src="script.js"></script>
 
 </body>

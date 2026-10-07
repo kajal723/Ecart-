@@ -1,6 +1,3 @@
-// -----------------------------------
-// Get all products from storeData
-// -----------------------------------
 
 let products = [];
 
@@ -21,13 +18,10 @@ storeData.categories.forEach(function(category) {
 console.log(products);
 
 
-// -----------------------------------
-// Search Products
-// -----------------------------------
+
 
 function searchProducts() {
 
-    // Get input values
 
     const minPrice =
         Number(document.getElementById("minPrice").value);
@@ -36,7 +30,6 @@ function searchProducts() {
         Number(document.getElementById("maxPrice").value);
 
 
-    // Validate input
 
     if (minPrice < 0 || maxPrice < 0) {
 
@@ -54,7 +47,6 @@ function searchProducts() {
     }
 
 
-    // Filter products
 
     const matchingProducts = products.filter(function(product) {
 
@@ -64,8 +56,6 @@ function searchProducts() {
     });
 
 
-    // Calculate total inventory value
-
     const totalValue = matchingProducts.reduce(function(total, product) {
 
         return total + (product.price * product.stock);
@@ -73,27 +63,21 @@ function searchProducts() {
     }, 0);
 
 
-    // Display number of products
-
     document.getElementById("productCount").textContent =
         matchingProducts.length;
 
 
-    // Display total inventory value
 
     document.getElementById("inventoryValue").textContent =
         "₹" + totalValue.toLocaleString("en-IN");
 
 
-    // Product container
 
     const productList =
         document.getElementById("productList");
 
     productList.innerHTML = "";
 
-
-    // No products found
 
     if (matchingProducts.length === 0) {
 
@@ -106,8 +90,6 @@ function searchProducts() {
         return;
     }
 
-
-    // Display product cards
 
     matchingProducts.forEach(function(product) {
 
